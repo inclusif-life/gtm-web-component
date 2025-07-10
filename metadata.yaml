@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-homepage: "https://www.example.com"
-documentation: "https://www.example.com/documentation"
+homepage: "https://inclusif.life"
+documentation: "https://inclusif.life/docs"
 versions:
-  - sha: 5f02a788b90ae804f86b04aa24af8937e567874a
+  - sha: 5f02a788b90ae804f86b04aa24af8937e567874a # Note: The sha value must reference the specific template.tpl file that you want to publish. Don't forget to update this value correctly with every new version!
     changeNotes: Initial Version
