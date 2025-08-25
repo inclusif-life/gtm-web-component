@@ -13,7 +13,7 @@
 # limitations under the License.
 
 homepage: "https://inclusif.life"
-documentation: "https://inclusif.life/docs"
+documentation: "https://docs.inclusif.life"
 versions:
   - sha: 5f02a788b90ae804f86b04aa24af8937e567874a # Note: The sha value must reference the specific template.tpl file that you want to publish. Don't forget to update this value correctly with every new version!
-    changeNotes: Initial Version
+    changeNotes: Initial version of Inclusif Accessibility Widget GTM template
