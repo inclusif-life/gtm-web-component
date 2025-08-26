@@ -23,7 +23,7 @@ ___INFO___
   "type": "TAG",
   "version": 1,
   "brand": {
-    "thumbnail": "https://inclusif.life/favicon.svg",
+    "thumbnail": "https://staging.inclusif.life/img/favicon-512x512.png",
     "displayName": "Inclusif",
     "id": "inclusif"
   },
