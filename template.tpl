@@ -15,15 +15,15 @@
 ___INFO___
 
 {
-  "displayName": "Inclusif Accessibility Widget",
-  "description": "Easily add the Inclusif accessibility widget to your website. The widget provides comprehensive accessibility tools to help users with disabilities navigate your site more effectively.",
+  "displayName": "Accessibility by Inclusif",
+  "description": "The widget provides comprehensive accessibility tools to help users with disabilities navigate your site more effectively.",
   "categories": ["UTILITY"],
   "securityGroups": [],
   "id": "cvt_temp_public_id",
   "type": "TAG",
   "version": 1,
   "brand": {
-    "thumbnail": "https://staging.inclusif.life/img/favicon-512x512.png",
+    "thumbnail": "https://addons.inclusif.life/img/favicon/favicon-gtm.png",
     "displayName": "Inclusif",
     "id": "inclusif"
   },
@@ -44,7 +44,7 @@ ___TEMPLATE_PARAMETERS___
     "isRequired": true
   },
   {
-    "help": "The language for the accessibility widget interface. Supported languages: 'en' (English), 'es' (Spanish)",
+    "help": "The language for the accessibility widget interface. Supported languages: 'en' (English), 'es' (Spanish), 'fr' (French), 'it' (Italian), 'pt' (Portuguese)",
     "displayName": "Language",
     "name": "language",
     "type": "TEXT",
@@ -100,13 +100,6 @@ ___TEMPLATE_PARAMETERS___
       }
     ],
     "defaultValue": false
-  },
-  {
-    "help": "Local development script path. Leave empty for production mode. Example: 'http://localhost:3000/widget.js' or '/path/to/local/widget.js'",
-    "displayName": "Local Development Script",
-    "name": "local",
-    "type": "TEXT",
-    "defaultValue": ""
   }
 ]
 
@@ -268,14 +261,12 @@ const apiKey = data.apiKey;
 const language = data.language || 'en';
 const position = data.position || 'bottom-right';
 const debug = data.debug || false;
-const local = data.local || '';
 
 log('Inclusif: Template parameters received:');
 log('  - apiKey:', apiKey);
 log('  - language:', language);
 log('  - position:', position);
 log('  - debug:', debug);
-log('  - local:', local);
 
 // Validation
 if (!apiKey) {
@@ -292,7 +283,6 @@ const initConfig = {
   language: language,
   position: position,
   debug: debug,
-  local: local
 };
 
 log('Inclusif: Config object created:', initConfig);
