@@ -42,64 +42,6 @@ ___TEMPLATE_PARAMETERS___
     "name": "apiKey",
     "type": "TEXT",
     "isRequired": true
-  },
-  {
-    "help": "The language for the accessibility widget interface. Supported languages: 'en' (English), 'es' (Spanish), 'fr' (French), 'it' (Italian), 'pt' (Portuguese)",
-    "displayName": "Language",
-    "name": "language",
-    "type": "TEXT",
-    "defaultValue": "en",
-    "isRequired": true
-  },
-  {
-    "help": "Position of the accessibility widget on the page.",
-    "displayName": "Widget Position",
-    "name": "position",
-    "type": "SELECT",
-    "selectItems": [
-      {
-        "displayValue": "Bottom Right",
-        "value": "bottom-right"
-      },
-      {
-        "displayValue": "Bottom Left",
-        "value": "bottom-left"
-      },
-      {
-        "displayValue": "Top Right",
-        "value": "top-right"
-      },
-      {
-        "displayValue": "Top Left",
-        "value": "top-left"
-      },
-      {
-        "displayValue": "Center Left",
-        "value": "center-left"
-      },
-      {
-        "displayValue": "Center Right",
-        "value": "center-right"
-      }
-    ],
-    "defaultValue": "bottom-right"
-  },
-  {
-    "help": "Enable debug mode for detailed console logging and debugging information.",
-    "displayName": "Debug Mode",
-    "name": "debug",
-    "type": "RADIO",
-    "radioItems": [
-      {
-        "displayValue": "Enabled",
-        "value": true
-      },
-      {
-        "displayValue": "Disabled", 
-        "value": false
-      }
-    ],
-    "defaultValue": false
   }
 ]
 
@@ -258,15 +200,9 @@ const copyFromWindow = require('copyFromWindow');
 
 // Get template parameters
 const apiKey = data.apiKey;
-const language = data.language || 'en';
-const position = data.position || 'bottom-right';
-const debug = data.debug || false;
 
 log('Inclusif: Template parameters received:');
 log('  - apiKey:', apiKey);
-log('  - language:', language);
-log('  - position:', position);
-log('  - debug:', debug);
 
 // Validation
 if (!apiKey) {
@@ -280,9 +216,6 @@ log('Inclusif: Starting queue setup...');
 // Set up Inclusif queue first (before script loads)
 const initConfig = {
   apiKey: apiKey,
-  language: language,
-  position: position,
-  debug: debug,
 };
 
 log('Inclusif: Config object created:', initConfig);
@@ -348,5 +281,5 @@ ___NOTES___
 
 Inclusif Accessibility Widget GTM Template
 - Loads the Inclusif accessibility widget on page load
-- Configurable API key, language, and position parameters  
+- Configurable API key
 - Provides comprehensive accessibility tools for website users
